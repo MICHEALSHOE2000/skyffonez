@@ -735,15 +735,24 @@ h2 {
 .category-card::after {
   position: absolute;
   right: 28px;
-  bottom: -20px;
-  width: 190px;
-  height: 250px;
+  bottom: -72px;
+  width: 205px;
+  height: 245px;
   border: 0;
   border-radius: 30px;
   content: "";
   background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.18)), url("images/16-1.jpg") center / cover;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
   transform: rotate(10deg);
+}
+
+.category-card::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(90deg, rgba(8, 10, 16, 0.86) 0%, rgba(8, 10, 16, 0.5) 54%, rgba(8, 10, 16, 0.08) 100%);
+  pointer-events: none;
 }
 
 .category-card:nth-child(2) {
@@ -767,6 +776,8 @@ h2 {
 }
 
 .category-card span {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   margin-bottom: 36px;
   border: 1px solid var(--dark-line);
@@ -779,17 +790,23 @@ h2 {
 }
 
 .category-card h3 {
+  position: relative;
+  z-index: 2;
   max-width: 340px;
   font-size: clamp(1.7rem, 4vw, 2.55rem);
 }
 
 .category-card p {
+  position: relative;
+  z-index: 2;
   max-width: 340px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
 }
 
 .category-card button {
+  position: relative;
+  z-index: 2;
   min-height: 44px;
   margin-top: 12px;
   border: 0;
